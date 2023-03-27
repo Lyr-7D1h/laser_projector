@@ -1,6 +1,6 @@
 const int galvo_x_pin = 25;
 const int galvo_y_pin = 26;
-const int delay_ms = 15;
+const int delay_ms = 5;
 
 void setup() {
   Serial.begin(115200);
@@ -9,23 +9,25 @@ void setup() {
 }
 
 void loop() {
- for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle++) {
-  analogWrite(galvo_x_pin, dutyCycle);
-  delay(delay_ms); 
- }
+ while (true) {
+   for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle++) {
+    analogWrite(galvo_x_pin, dutyCycle);
+    delay(delay_ms); 
+   }
 
- for (int dutyCycle = 255; dutyCycle >= 0; dutyCycle--) {
-  analogWrite(galvo_x_pin, dutyCycle);
-  delay(delay_ms); 
- }
+   for (int dutyCycle = 255; dutyCycle >= 0; dutyCycle--) {
+    analogWrite(galvo_x_pin, dutyCycle);
+    delay(delay_ms); 
+   }
 
- for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle++) {
-  analogWrite(galvo_y_pin, dutyCycle);
-  delay(delay_ms); 
- }
+   for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle++) {
+    analogWrite(galvo_y_pin, dutyCycle);
+    delay(delay_ms); 
+   }
 
- for (int dutyCycle = 255; dutyCycle >= 0; dutyCycle--) {
-  analogWrite(galvo_y_pin, dutyCycle);
-  delay(delay_ms); 
+   for (int dutyCycle = 255; dutyCycle >= 0; dutyCycle--) {
+    analogWrite(galvo_y_pin, dutyCycle);
+    delay(delay_ms); 
+   }
  }
 }
