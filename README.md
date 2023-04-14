@@ -33,3 +33,4 @@ G ground
 # Resources
 
 [https://www.instructables.com/Arduino-Laser-Show-With-Real-Galvos/](https://www.instructables.com/Arduino-Laser-Show-With-Real-Galvos/)
+[https://github.com/DeltaFlo/LaserProjector](https://github.com/DeltaFlo/LaserProjector)
